@@ -23,11 +23,10 @@ import com.engeto.java1.project02.SortColumn;
  */
 public class LineageImpl implements Lineage {
 
-	private Map<Integer, Person> data;
+	private final Map<Integer, Person> data = new HashMap<Integer, Person>();
 	
 	public LineageImpl() {
 		super();
-		data = new HashMap<Integer, Person>();
 	}
 
 	@Override

@@ -18,7 +18,7 @@ import org.junit.jupiter.api.Test;
 
 import com.engeto.java1.project02.Sex;
 import com.engeto.java1.project02.SortColumn;
-import com.engeto.java1.project02.impl.LineageImpl;
+import com.engeto.java1.project02.LineageImpl;
 
 
 /**
@@ -130,9 +130,7 @@ class LineageImplTest {
 	void testGetName() throws Exception {
 
 		assertEquals("Adam", l.getName(1));
-		Assertions.assertThrows(Exception.class, () -> {
-			l.getName(99);
-		});
+		Assertions.assertThrows(Exception.class, () -> l.getName(99));
 	}
 
 	/**
@@ -168,9 +166,7 @@ class LineageImplTest {
 	void testGetSex() throws Exception {
 
 		assertEquals(Sex.MALE, l.getSex(1));
-		Assertions.assertThrows(Exception.class, () -> {
-			l.getSex(99);
-		});
+		Assertions.assertThrows(Exception.class, () -> l.getSex(99));
 	}
 
 	/**

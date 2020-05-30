@@ -13,21 +13,21 @@ import java.util.Set;
  */
 public interface Lineage {
 	
-	public void add(Integer id, String name, Date birthDate, Date deathDate, Sex sex, Set<Integer> parents) throws Exception;
-	public void delete(Integer id) throws Exception;
+	void add(Integer id, String name, Date birthDate, Date deathDate, Sex sex, Set<Integer> parents) throws Exception;
+	void delete(Integer id) throws Exception;
 	
-	public String getName(Integer id) throws Exception;
-	public Date getBirthDate(Integer id) throws Exception;
-	public Date getDeathDate(Integer id) throws Exception;
-	public Sex getSex(Integer id) throws Exception;
-	public Set<Integer> getParents(Integer id) throws Exception;
+	String getName(Integer id) throws Exception;
+	Date getBirthDate(Integer id) throws Exception;
+	Date getDeathDate(Integer id) throws Exception;
+	Sex getSex(Integer id) throws Exception;
+	Set<Integer> getParents(Integer id) throws Exception;
 
-	public Set<Integer> getChildren(Integer id) throws Exception;
-	public Set<Integer> getDescendants(Integer id) throws Exception;
-	public Set<Integer> getAncestors(Integer id) throws Exception;
-	public Set<Integer> getSiblings(Integer id) throws Exception;
+	Set<Integer> getChildren(Integer id) throws Exception;
+	Set<Integer> getDescendants(Integer id) throws Exception;
+	Set<Integer> getAncestors(Integer id) throws Exception;
+	Set<Integer> getSiblings(Integer id) throws Exception;
 	
-	public int count();
+	int count();
 	
 	List<Integer> findAll();
 	List<Integer> findAllByName(String name) throws Exception;
